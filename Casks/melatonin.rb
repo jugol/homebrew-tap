@@ -1,6 +1,6 @@
 cask "melatonin" do
-  version "0.1.3"
-  sha256 "35752e7a2bce17db8aa924de3fb38cb553925b8ac092586cbe6068a32c6f1e41"
+  version "0.1.4"
+  sha256 "3c8b1ed2bf2a55efbdb48aa84d3edf5427156c810bd9a08ed88700a6ec052e42"
 
   url "https://github.com/jugol/Melatonin/releases/download/v#{version}/Melatonin.dmg"
   name "Melatonin"
@@ -35,10 +35,6 @@ cask "melatonin" do
       trash:     "~/Library/Preferences/io.github.jugol.Melatonin.plist"
 
   caveats <<~EOS
-    Melatonin isn't notarized by Apple yet. If macOS blocks the first launch,
-    open System Settings › Privacy & Security and click "Open Anyway", or run:
-      xattr -dr com.apple.quarantine #{appdir}/Melatonin.app
-
     To remove Melatonin's privileged helper too, uninstall with --zap.
   EOS
 end
