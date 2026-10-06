@@ -1,6 +1,6 @@
 cask "melatonin" do
-  version "0.1.4"
-  sha256 "3c8b1ed2bf2a55efbdb48aa84d3edf5427156c810bd9a08ed88700a6ec052e42"
+  version "0.1.5"
+  sha256 "555e03b75e7e58c46def53ffe4658843c63377c0e788f188e917b2de89e45c60"
 
   url "https://github.com/jugol/Melatonin/releases/download/v#{version}/Melatonin.dmg"
   name "Melatonin"
@@ -12,6 +12,7 @@ cask "melatonin" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Melatonin.app"
@@ -32,7 +33,10 @@ cask "melatonin" do
         "/Library/LaunchDaemons/io.github.jugol.melatonin.helper.plist",
         "/Library/PrivilegedHelperTools/io.github.jugol.melatonin.helper",
       ],
-      trash:     "~/Library/Preferences/io.github.jugol.Melatonin.plist"
+      trash:     [
+        "~/Library/Caches/io.github.jugol.Melatonin",
+        "~/Library/Preferences/io.github.jugol.Melatonin.plist",
+      ]
 
   caveats <<~EOS
     To remove Melatonin's privileged helper too, uninstall with --zap.
