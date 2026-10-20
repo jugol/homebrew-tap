@@ -1,6 +1,6 @@
 cask "melatonin" do
-  version "0.1.6"
-  sha256 "15d652f509f2a0993b100750fef32b9515b399142b820ef082a744df0b0abd12"
+  version "0.1.7"
+  sha256 "5b17f06863da7382fd4ef9894df2aae03970772354c04f508d3ff4bb1f8c15c0"
 
   url "https://github.com/jugol/Melatonin/releases/download/v#{version}/Melatonin.dmg"
   name "Melatonin"
